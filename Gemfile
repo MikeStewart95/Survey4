@@ -14,11 +14,13 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
-  gem 'pg'	
-  gem 'rails_12factor'
+  gem 'sqlite3', '~> 1.4'	
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] 
 end
 
